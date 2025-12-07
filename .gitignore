@@ -2,3 +2,5 @@ srms.c
 srms.exe
 StudentManagement.exe
 users.dat
+*.exe
+*.dat
