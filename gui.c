@@ -281,18 +281,18 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
             if (findStudentById(id, &s)) {
                 char out[1024];
                 sprintf(out,
-                        "ID: %d\n"
-                        "Name: %s\n"
-                        "Age: %d, Gender: %c\n"
-                        "Address: %s\n"
-                        "Phone: %s, Email: %s\n"
-                        "Marks - Math: %.2f, Physics: %.2f, Chemistry: %.2f, English: %.2f, Computer: %.2f\n"
-                        "Total: %.2f / 500, Percentage: %.2f%%, Grade: %c\n"
-                        "---------------------------------------------\n",
-                        s.id, s.name, s.age, s.gender,
-                        s.address, s.phone, s.email,
-                        s.math, s.physics, s.chemistry, s.english, s.computer,
-                        s.total, s.percentage, s.grade);
+                    "ID: %d\r\n"
+                    "Name: %s\r\n"
+                    "Age: %d, Gender: %c\r\n"
+                    "Address: %s\r\n"
+                    "Phone: %s, Email: %s\r\n"
+                    "Marks - Math: %.2f, Physics: %.2f, Chemistry: %.2f, English: %.2f, Computer: %.2f\r\n"
+                    "Total: %.2f / 500, Percentage: %.2f%%, Grade: %c\r\n"
+                    "---------------------------------------------\r\n\r\n",
+                    s.id, s.name, s.age, s.gender,
+                    s.address, s.phone, s.email,
+                    s.math, s.physics, s.chemistry, s.english, s.computer,
+                    s.total, s.percentage, s.grade);
 
                 SetWindowText(hOut, out);  // only show here
             } else {
@@ -479,18 +479,18 @@ void ShowAllStudents(HWND hwnd) {
     for (int i = 0; i < count; ++i) {
         Student *s = &arr[i];
         sprintf(line,
-                "ID: %d\n"
-                "Name: %s\n"
-                "Age: %d, Gender: %c\n"
-                "Address: %s\n"
-                "Phone: %s, Email: %s\n"
-                "Marks - Math: %.2f, Physics: %.2f, Chemistry: %.2f, English: %.2f, Computer: %.2f\n"
-                "Total: %.2f / 500, Percentage: %.2f%%, Grade: %c\n"
-                "---------------------------------------------\n",
-                s->id, s->name, s->age, s->gender,
-                s->address, s->phone, s->email,
-                s->math, s->physics, s->chemistry, s->english, s->computer,
-                s->total, s->percentage, s->grade);
+            "ID: %d\r\n"
+            "Name: %s\r\n"
+            "Age: %d, Gender: %c\r\n"
+            "Address: %s\r\n"
+            "Phone: %s, Email: %s\r\n"
+            "Marks - Math: %.2f, Physics: %.2f, Chemistry: %.2f, English: %.2f, Computer: %.2f\r\n"
+            "Total: %.2f / 500, Percentage: %.2f%%, Grade: %c\r\n"
+            "---------------------------------------------\r\n\r\n",
+            s->id, s->name, s->age, s->gender,
+            s->address, s->phone, s->email,
+            s->math, s->physics, s->chemistry, s->english, s->computer,
+            s->total, s->percentage, s->grade);
 
         strcat(buffer, line);
     }
